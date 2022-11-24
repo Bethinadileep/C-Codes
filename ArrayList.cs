@@ -1,3 +1,4 @@
+//Non Generic
 using System;
 using System.Collections;
 class HelloWorld {
@@ -21,6 +22,28 @@ class HelloWorld {
     }
     else{
         Console.WriteLine("Data is not present");
+    }
+  }
+}
+
+
+//Generic
+using System;
+using System.Collections.Generic;
+class HelloWorld {
+  static void Main() {
+    List<int> l = new List<int>();
+    l.Add(100);
+    l.Add(200);
+    l.Add(300);
+    l.Insert(1,500);
+    Console.WriteLine(l.Capacity);
+    l.Remove(100);
+    foreach(int item in l){
+        Console.WriteLine(item);
+    }
+    if(l.Contains(200)){
+        Console.WriteLine("Data is Present");
     }
   }
 }
